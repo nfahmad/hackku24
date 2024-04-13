@@ -44,6 +44,27 @@
             width:150px;
             height:150px;
         }
+        .dropdown-menu {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            padding: 10px;
+            background: transparent;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        select {
+            width: 100%;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            background: transparent;
+            color: black; /* Added for visibility */
+        }
+
 
         </style>
     </head>
@@ -57,5 +78,33 @@
                 <p class="w3-xlarge w3-center">Transforming Your Health</p>
             </div>
         </div>
+
+
+        <div class="dropdown-menu">
+            <select id="serviceSelection" onchange="storeSelection()">
+                <option value="pharmacy">Pharmacy</option>
+                <option value="primaryCare">Primary Care</option>
+                <option value="dentistry">Dentistry</option>
+            </select>
+        </div>
+
+        <script>
+            function storeSelection() {
+                var selection = document.getElementById('serviceSelection').value;
+                localStorage.setItem('selectedService', selection);
+            }
+
+            window.onload = function() {
+                var savedSelection = localStorage.getItem('selectedService');
+                if (savedSelection) {
+                    document.getElementById('serviceSelection').value = savedSelection;
+                }
+            }
+
+        </script>
+
+        
     </body>
+
+
 </html>
