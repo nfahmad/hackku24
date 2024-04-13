@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HealthBridge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+        body,h1 {font-family: "Raleway", sans-serif}
+        body, html {height: 100%; color: black;}
+        .bgimg {
+            /* Apply a linear gradient that overlays a semi-transparent black color */
+            background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('static/img/kansas.png'); 
+    
+            background-repeat: no-repeat;  /* Do not repeat the image */
+            background-position: center 10px; /* Center the background image */
+            background-size: 1600px 900px;  /* Fixed size of the image */
+    
+            min-height: 100%;
+            min-width: 100vw;  /* Ensures the gradient covers the entire width of the view */
+            height: 100vh;     /* Ensures the div covers the entire height of the viewport */
+    
+            position: relative; /* Essential for absolute positioning of child elements */
+            backdrop-filter: brightness(60%); /* Dimming effect applied on top of the background */
+        }
+
+        .clickable-area {
+            position: absolute;
+            
+            top: 25%; /* Position it 30% from the top of the container */
+            left: 87%; /* Position it 30% from the left of the container */
+            width: 9.5%; /* Make it 40% of the container width */
+            height: 5%; /* Make it 40% of the container height */
+            
+            cursor: pointer; /* Changes the cursor to indicate it's clickable */
+            background: rgba(255, 0, 0, 0.2); /* Optional: shows the area for demo purposes */
+        }
+
+        #bottomright{
+            position:fixed;
+            right:10px;
+            bottom:10px;
+            width:150px;
+            height:150px;
+            z-index: 100;
+            opacity: 1;
+        }
+
+        </style>
+    </head>
+    <body>
+        <img src="static/img/logo.webp" alt="Image not found" id="bottomright">
+        <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+            <a href="/home/ajain/Desktop/school/hackku24/test.html" class="clickable-area"></a> <!-- The clickable area -->
+            <div class="w3-display-topmiddle">
+                <h1 class="w3-jumbo w3-animate-top">HealthBridge</h1>
+                <hr class="w3-border-white" style="margin:auto;width:40%">
+                <p class="w3-xlarge w3-center">Transforming Your Health</p>
+            </div>
+        </div>
+    </body>
+</html>
