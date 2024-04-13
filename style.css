@@ -53,3 +53,11 @@ ul li:before {
 p, li {
     line-height: 1.6;
 }
+
+#bottomright{
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    width:150px;
+    height:150px;
+}
