@@ -1,5 +1,6 @@
 from flask import Flask, send_from_directory
 
+
 app = Flask("hackku24")
 
 @app.get("/")
