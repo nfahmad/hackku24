@@ -4,7 +4,7 @@ app = Flask("hackku24")
 
 @app.get("/")
 def index():
-    return send_from_directory("static", "/page/index.html")
+    return send_from_directory("static/page", "index.html")
 
 @app.get("/ks/kansas-city")
 def ks_page():
