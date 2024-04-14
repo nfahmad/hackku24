@@ -1,6 +1,5 @@
 from flask import Flask, send_from_directory
 
-
 app = Flask("hackku24")
 
 @app.get("/")
@@ -10,3 +9,7 @@ def index():
 @app.get("/ks/kansas-city")
 def ks_page():
     return send_from_directory("static/page", "ks-kansas-city.html")
+
+@app.get("/chat")
+def chat_page():
+    return send_from_directory("static/page", "chat.html")
