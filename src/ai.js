@@ -34,5 +34,28 @@ async function run(){
 }
 
 
+function createBox(){
+    const body = document.body;
+
+    const chatContainer = document.createElement("div");
+    chatContainer.id = 'chat-container';
+    body.appendChild(chatContainer);
+
+    const chatWindow = document.createElement('div');
+    chatWindow.id = 'chat-window';
+    chatContainer.appendChild(chatWindow);
+
+    const inputBox = document.createElement('input');
+    inputBox.id = 'input-box';
+    inputBox.type = 'text';
+    inputBox.placeholder = 'Ask a question: ';
+    inputBox.addEventListener('keypress', function(event){
+        if (event.key === 'Enter'){
+            
+        }
+    });
+}
 
 
+
+window.onload =createBox; 
