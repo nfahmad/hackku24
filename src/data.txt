@@ -1,0 +1,206 @@
+"You are giving advice to a user who is currently seeking medical care in the state of Kansas. Assume that this user is disadvantaged, and does not have easy access to medical care through standard channels. Assume that this user has a mix of three priorites regarding the medical care they are seeking. These three priorities include: 1) location, or the distance the medical service is from their current location, 2) cost, or the price of receiving this medical care with or without insurance, and 3) provider, or the most effective solution for their medical insurance provider. You will be provided a list of locations within the state of Kansas that offer an array of medical services. You are to converse with a user to determine the medical service they require and their priorities. Once this has been determined, provide the user with the best location for them based on these factors. The data for the locations is listed in JSON format below:",
+
+{
+  "Primary_Care_Clinics": [
+    {
+      "Name": "Swope Health Wyandotte",
+      "Address": "21 N 12th St., Ste. 400, KCK 66102",
+      "Phone": "816-599-5111",
+      "Services": [
+        "Family health care",
+        "Dental",
+        "Medicaid accepted",
+        "Fees based on income ($25 max)",
+        "Preventive care",
+        "Non-emergency services"
+      ],
+      "Hours": "M-F 8:30a-5:30p"
+    },
+    {
+      "Name": "Duchesne Clinic",
+      "Address": "636 Tauromee Ave, KCK 66101",
+      "Phone": "913-321-2626",
+      "Services": [
+        "Primary care",
+        "Rx assistance",
+        "Lab testing",
+        "Services provided even if unable to pay",
+        "Serves uninsured adults only",
+        "Appointments only"
+      ],
+      "Hours": "M-F 8a-5p"
+    },
+    {
+      "Name": "Mercy & Truth Medical Missions",
+      "Address": "721 N. 31st St., KCK 66102",
+      "Phone": "913-621-0074",
+      "Services": [
+        "Family health",
+        "Pediatrics",
+        "Women's health",
+        "Primary care",
+        "Lab testing",
+        "Acute/chronic care",
+        "Medicaid accepted",
+        "Fees based on income"
+      ],
+      "Hours": "M-F 8:30a–5p",
+      "Appointment": "Walk-ins welcome"
+    },
+    {
+      "Name": "Vibrant Health",
+      "Address": "21 N 12th St. Suite 300, KCK 66102",
+      "Phone": "913-342-2552",
+      "Services": [
+        "Family health",
+        "Pediatrics",
+        "OB",
+        "Dental",
+        "Rad referrals",
+        "Fees based on income",
+        "Medicaid accepted",
+        "Appointments only"
+      ],
+      "Hours": {
+        "Monday_Friday": "8a-5p",
+        "Tuesday_Wednesday_Thursday": "8a-7p",
+        "Saturday": "8a-12p"
+      }
+    },
+    {
+      "Name": "Children’s Mercy West (Cordell Meeks Clinic)",
+      "Address": "4313 State Ave., KCK 66102",
+      "Phone": "913-233-4400",
+      "Services": [
+        "Well child exams",
+        "Immunizations",
+        "Referrals",
+        "Specialty care referrals as necessary",
+        "24/7 Nurse Line"
+      ],
+      "Hours": {
+        "Monday_Friday": "8a-5p",
+        "Saturday": "Appointments start at 8:30a"
+      }
+    },
+    {
+      "Name": "Wyandotte Health Department",
+      "Address": "619 Ann Avenue, KCK 66101",
+      "Phone": "913-573-8855",
+      "Services": [
+        "Immunizations",
+        "STD testing",
+        "Pregnancy health",
+        "Senior health",
+        "Adolescent health",
+        "Community Health and Outreach"
+      ],
+      "Hours": "M-F 8:30a-5p"
+    }
+  ],
+  "Dental_Clinics": [
+    {
+      "Name": "Swope Health",
+      "Address": "21 N 12th St., Ste. 400, KCK 66102",
+      "Phone": "816-922-7600",
+      "Services": [
+        "Cleanings and procedures",
+        "Medicaid accepted"
+      ],
+      "Hours": "M-F 8:30a-5:30p"
+    },
+    {
+      "Name": "Vibrant Health",
+      "Address": "21 N 12th St. Suite 300, KCK 66102",
+      "Phone": "913-342-2552",
+      "Services": [
+        "Cleanings and procedures",
+        "Medicaid accepted"
+      ],
+      "Hours": {
+        "Monday_Wednesday_Friday": "8a-5p",
+        "Tuesday_Thursday": "8a-8p",
+        "Saturday": "8a-12p"
+      }
+    },
+    {
+      "Name": "UMKC Community Dental Clinic",
+      "Address": "650 E. 25th St., Kansas City, MO 64108",
+      "Phone": "816-235-2100",
+      "Services": [
+        "Cleanings and procedures",
+        "Uninsured pay reduced fees",
+        "Medicaid accepted"
+      ],
+      "Hours": "M-F 9am OR 1pm",
+      "Appointments": "Required"
+    }
+  ],
+  "Prescription_Assistance": [
+    {
+      "Name": "KC Medicine Cabinet",
+      "Phone": "816-276-7517",
+      "Fax": "816-817-0547",
+      "Email": "administration@kcmedicinecabinet.org",
+      "Type": "Short-term"
+    },
+    {
+      "Name": "The University of Kansas Health System Medication Assistance Program",
+      "Phone": "913-588-2384",
+      "Fax": "913-588-2328",
+      "Email": "rxmedassist@kumc.edu",
+      "Type": "Long-term"
+    }
+  ],
+  "Eye_Care": {
+    "Name": "Virginia Ave Eye Clinic",
+    "Address": "705 Virginia Ave., Kansas City, MO",
+    "Phone": "816-866-5702",
+    "Services": [
+      "Complete eye exams",
+      "Vision correction via free eyeglasses",
+      "Referrals/follow-up for further care"
+    ],
+    "Hours": "11a-2p, 2nd Sunday every month",
+    "Fees": "Nominal fee may be required on day of appointment"
+  },
+  "Quitting_Smoking_Assistance": {
+    "Website": "KSquit.org",
+    "Phone": "1-800-QUIT-NOW (784-8669)",
+    "Services": [
+      "FREE tobacco cessation aids for all KS residents",
+      "24/7 support via text, phone, and email",
+      "Free medication (gum, patches, etc.) for all Medicaid users"
+    ]
+  },
+  "Legal_Assistance": {
+    "Name": "Medical-Legal Partnership (MLP)",
+    "Affiliation": "KU Law",
+    "Services": [
+      "Free legal assistance to low-income patients",
+      "Support for tax, income supports, immigration, housing, education, and employment disputes"
+    ]
+  },
+  "Personal_Safety": [
+    {
+      "Name": "Hope House",
+      "Address": "Jackson Co.",
+      "Phone": "816-461-4673"
+    },
+    {
+      "Name": "Rose Brooks Center",
+      "Address": "S. KC",
+      "Phone": "816-523-5550"
+    },
+    {
+      "Name": "Synergy/Safe Haven",
+      "Address": "N. KC",
+      "Phone": "816-321-7050"
+    },
+    {
+      "Name": "Newhouse",
+      "Address": "NE KC",
+      "Phone": "816-471-5800"
+    }
+  ]
+}
